@@ -1,0 +1,1799 @@
+$white: #FFFFFF;
+$grey: #999999;
+$blue:#2E1AAD;
+$black: #231F20;
+$red: red;
+
+@mixin ManropeBold {
+   font-family: Manrope;
+   font-style: normal;
+   font-weight: 800;
+}
+
+@mixin ManropeNormal {
+   font-family: Manrope;
+   font-style: normal;
+   font-weight: normal;
+}
+
+@mixin phone {
+   @media (max-width:375px) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media (min-width:376px) and (max-width:768px) {
+      @content;
+   }
+}
+
+@mixin mediumscreen {
+   @media (min-width:769px) and (max-width:1650px) {
+      @content;
+   }
+}
+
+.menu-top {
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+   height: 1.48%;
+   position: fixed;
+   inset: 0;
+   background: $white;
+
+   &__logo {
+      position: absolute;
+      width: 8.6%;
+      height: 29.93px;
+      inset: 25.36px 9.17%;
+   }
+
+   &__left-nav {
+      display: flex;
+      flex-direction: row;
+      width: 31.67%;
+      height: 32px;
+      position: absolute;
+      inset: 24px 18.75%;
+   }
+
+   &__item {
+      width: 2.78%px;
+      height: 20px;
+      padding: 6px 0%;
+      position: static;
+      @include ManropeBold();
+      font-size: calc(10px + 4 * (100vw / 1440));
+      line-height: 20px;
+      font-feature-settings: 'liga'off;
+      color: $grey;
+      margin: 0px 2.22%;
+
+      &_main {
+         color: $blue;
+      }
+   }
+
+   &__right-nav {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      inset: 20px 53.68%;
+   }
+
+   @include phone {
+      &__right-nav {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   &__employers {
+      width: 6.60%;
+      height: 20px;
+      position: static;
+      @include ManropeBold();
+      font-size: calc(8px + 6 * (100vw / 1440));
+      line-height: 20px;
+      font-feature-settings: 'liga'off;
+      color: $grey;
+      margin: 10px 2.22% 10px 0%;
+   }
+
+   @include phone {
+      &__employers {
+         width: 20%;
+         position: absolute;
+         inset: 0% 2%;
+      }
+   }
+
+   @include tablet {
+      &__employers {
+         width: 20%;
+         position: absolute;
+         top: -20%;
+      }
+   }
+
+   @include mediumscreen {
+      &__employers {
+         width: 20%;
+         position: absolute;
+         top: -20%;
+      }
+   }
+
+   &__headhunters {
+      width: 7.85%;
+      height: 20px;
+      position: static;
+      @include ManropeBold();
+      font-size: calc(8px + 6 * (100vw / 1440));
+      color: $grey;
+      margin: 0.69% 0%;
+   }
+
+   @include phone {
+      &__headhunters {
+         width: 25%;
+         position: absolute;
+         inset: 60% 2%;
+      }
+   }
+
+   @include tablet {
+      &__headhunters {
+         width: 30%;
+         position: absolute;
+         top: 40%;
+      }
+   }
+
+   @include mediumscreen {
+      &__headhunters {
+         width: 30%;
+         position: absolute;
+         top: 40%;
+      }
+   }
+
+   &__buttons {
+
+      :hover {
+         border-color: $red;
+         background-color: $grey;
+      }
+
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 14.86%;
+      height: 40px;
+      margin-left: 3.33%;
+   }
+
+   @include phone {
+      &__buttons {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   @include mediumscreen {
+      &__buttons {
+         position: absolute;
+         left: 15%;
+      }
+   }
+
+   &__login {
+      width: 50%;
+      height: 40px;
+      border-radius: 8px;
+      border-color: $blue;
+      background-color: $white;
+      @include ManropeBold();
+      font-size: calc(8px + 6 * (100vw / 1440));
+      text-align: center;
+      color: $blue;
+   }
+
+   @include phone {
+      &__login {
+         width: 13%;
+         height: 60%;
+         position: absolute;
+         inset: 0% 25%;
+      }
+   }
+
+   @include tablet {
+      &__login {
+         width: 20%;
+         height: 65%;
+         position: absolute;
+         inset: -10% 20.5%;
+      }
+   }
+
+   &__signup {
+      width: 50%;
+      height: 40px;
+      margin: 0px 0% 0px 6.54%;
+      border-radius: 8px;
+      border-color: $blue;
+      background-color: $blue;
+      @include ManropeBold();
+      font-size: calc(8px + 6 * (100vw / 1440));
+      line-height: 20px;
+      text-align: center;
+      font-feature-settings: 'liga'off;
+      color: $white;
+   }
+
+   @include tablet {
+      &__signup {
+         width: 20%;
+         height: 67%;
+         position: absolute;
+         inset: 70% 14%;
+      }
+   }
+
+   @include phone {
+      &__signup {
+         width: 13%;
+         height: 65%;
+         position: absolute;
+         inset: 70% 19%;
+      }
+   }
+}
+
+.search-field {
+
+   &__content {
+      max-width: 1920px;
+      margin: 0px auto;
+      padding: 0px 11.3%;
+      height: 763px;
+      position: absolute;
+      inset: 81px 0%;
+      background-color: #F5F7FA;
+   }
+
+   &__title {
+      width: 37.92%;
+      height: 120px;
+      position: absolute;
+      inset: 28.57% 11.47%;
+      @include ManropeBold();
+      font-size: calc(5px + 43 * (100vw / 1440));
+      line-height: 60px;
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 40% 11.47%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 40% 11.47%;
+      }
+   }
+
+   &__subtitle {
+      width: 33.61%;
+      height: 60px;
+      position: absolute;
+      inset: 366px 11.53%;
+      @include ManropeNormal();
+      font-size: calc(10px + 8 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &__subtitle {
+         width: 80%;
+         height: 30%;
+         position: absolute;
+         inset: 50% 11.47%;
+      }
+   }
+
+   @include tablet {
+      &__subtitle {
+         width: 80%;
+         height: 30%;
+         position: absolute;
+         inset: 50% 11.47%;
+      }
+   }
+
+   &__picture {
+      width: 40.63%;
+      height: 57.14%;
+      position: absolute;
+      inset: 8.1% 51.46%;
+   }
+
+   @include phone {
+      &__picture {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 5% 0;
+      }
+   }
+
+   @include tablet {
+      &__picture {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 5% 0;
+      }
+   }
+
+   &__details {
+      width: 100%;
+      height: 12.58%;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 72.74%;
+      border-radius: 8px;
+      background-color: $white;
+   }
+
+   @include phone {
+      &__details {
+         height: 25%;
+         top: 65%;
+      }
+   }
+
+   @include tablet {
+      &__details {
+         height: 25%;
+         top: 65%;
+      }
+   }
+
+   &__first-field {
+      width: 28.38%;
+      height: 46px;
+      padding-left: 1.44%;
+      border-radius: 8px;
+      position: absolute;
+      inset: 22px 2.88%;
+      @include ManropeBold();
+      font-size: calc(12px + 4 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &__first-field {
+         width: 40%;
+         height: 25%;
+         top: 20%;
+         left: 5%;
+      }
+   }
+
+   @include tablet {
+      &__first-field {
+         width: 40%;
+         height: 25%;
+         top: 20%;
+         left: 5%;
+      }
+   }
+
+   &__second-field {
+      width: 24.77%;
+      height: 46px;
+      padding-left: 1.44%;
+      border-radius: 8px;
+      position: absolute;
+      inset: 22px 34.86%;
+      @include ManropeBold();
+      font-size: calc(12px + 4 * (100vw / 1440));
+      line-height: 22px;
+      font-feature-settings: 'liga'off;
+      color: $grey;
+   }
+
+   @include phone {
+      &__second-field {
+         width: 40%;
+         height: 25%;
+         top: 20%;
+         left: 53%
+      }
+   }
+
+   @include tablet {
+      &__second-field {
+         width: 40%;
+         height: 25%;
+         top: 20%;
+         left: 53%
+      }
+   }
+
+   &__third-field {
+
+      width: 19.91%;
+      height: 52px;
+      padding-left: 1.44%;
+      ;
+      border-radius: 8px;
+      position: absolute;
+      inset: 22px 63.24%;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 800;
+      font-size: calc(12px + 4 * (100vw / 1440));
+      line-height: 22px;
+      font-feature-settings: 'liga'off;
+      color: $grey;
+   }
+
+   @include phone {
+      &__third-field {
+         width: 43%;
+         height: 27%;
+         top: 60%;
+         left: 5%;
+      }
+   }
+
+   @include tablet {
+      &__third-field {
+         width: 43%;
+         height: 27%;
+         top: 60%;
+         left: 5%;
+      }
+   }
+
+   &__fourth-field:hover {
+      border-color: $red;
+      background-color: $grey;
+   }
+
+   &__fourth-field {
+
+      width: 10.36%;
+      height: 52px;
+      border-radius: 8px;
+      position: absolute;
+      inset: 22px 86.76%;
+      background: $blue;
+      @include ManropeBold() font-size: calc(12px + 4 * (100vw / 1440));
+      text-align: center;
+      color: $white;
+   }
+
+   @include phone {
+      &__fourth-field {
+         width: 43%;
+         height: 27%;
+         top: 59%;
+         left: 53%;
+      }
+   }
+
+   @include tablet {
+      &__fourth-field {
+         width: 43%;
+         height: 27%;
+         top: 59%;
+         left: 53%;
+      }
+   }
+}
+
+.for-candidates {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+
+   &__title {
+      position: absolute;
+      inset: 956px 11.3%;
+      width: 20.63%;
+      margin-bottom: 48px;
+      @include ManropeBold();
+      font-size: calc(20px + 20 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 100%;
+         position: absolute;
+         inset: 120% 11.3%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+      }
+   }
+
+   @include mediumscreen {
+      &__title {
+         width: 100%;
+      }
+   }
+
+   &__text {
+      width: 40%;
+      height: 418px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      top: 1036px;
+   }
+
+   @include phone {
+      &__text {
+         width: 80%;
+         height: 418px;
+         position: absolute;
+         top: 155%;
+      }
+   }
+
+   @include tablet {
+      &__text {
+         width: 80%;
+         height: 200px;
+         position: absolute;
+         top: 155%;
+      }
+   }
+
+   &__subtitle {
+      width: 90%;
+      height: 26px;
+      margin-bottom: 8px;
+      @include ManropeBold();
+      font-size: calc(8px + 10 * (100vw / 1440));
+      color: $black;
+   }
+
+   &__content {
+      width: 90%;
+      height: 48px;
+      margin-bottom: 30px;
+      @include ManropeNormal();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      color: $grey;
+   }
+
+   &__picture {
+      width: 45%;
+      height: 530px;
+      position: absolute;
+      inset: 959px 50%;
+   }
+
+   @include phone {
+      &__picture {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 127% 0;
+      }
+   }
+
+   @include tablet {
+      &__picture {
+         width: 140%;
+         height: 45%;
+         position: absolute;
+         inset: 110% 0;
+      }
+   }
+}
+
+.for-employers {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+
+   &__title {
+      position: absolute;
+      inset: 1648px 50%;
+      width: 19.16%;
+      margin-bottom: 48px;
+      @include ManropeBold();
+      font-size: calc(20px + 20 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 100%;
+         position: absolute;
+         inset: 212% 11.3%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+         inset: 222% 52.5%;
+      }
+   }
+
+   @include mediumscreen {
+      &__title {
+         width: 100%;
+      }
+   }
+
+   &__text {
+      width: 40%;
+      height: 502px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      inset: 1752px 50%;
+   }
+
+   @include phone {
+      &__text {
+         width: 80%;
+         height: 418px;
+         position: absolute;
+         top: 245%;
+         left: 15%;
+      }
+   }
+
+   @include tablet {
+      &__text {
+         width: 80%;
+         height: 418px;
+         position: absolute;
+         top: 245%;
+         left: 15%;
+      }
+   }
+
+   &__subtitle {
+      width: 90%;
+      height: 26px;
+      margin-bottom: 8px;
+      @include ManropeBold();
+      font-size: calc(10px + 8 * (100vw / 1440));
+      color: $black;
+   }
+
+   &__content {
+      width: 90%;
+      height: 48px;
+      margin-bottom: 30px;
+      @include ManropeNormal();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      color: $grey;
+   }
+
+   &__button:hover {
+      border-color: $red;
+      background-color: $grey;
+   }
+
+   &__button {
+
+      width: 24.81%;
+      height: 52px;
+      position: absolute;
+      inset: 514px 0% 0px;
+      background: $blue;
+      border-radius: 8px;
+      @include ManropeBold();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      text-align: center;
+      color: $white;
+   }
+
+   @include phone {
+      &__button {
+         width: 35%;
+         height: 8%;
+         position: absolute;
+         inset: 110% 0;
+      }
+   }
+
+   @include tablet {
+      &__button {
+         width: 25%;
+         height: 8%;
+         position: absolute;
+         inset: 105% 0;
+      }
+   }
+
+   &__picture {
+      width: 45%;
+      height: 530px;
+      position: absolute;
+      inset: 1625px 5%;
+   }
+
+   @include phone {
+      &__picture {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 215% 0;
+      }
+   }
+
+   @include tablet {
+      &__picture {
+         width: 140%;
+         height: 45%;
+         position: absolute;
+         inset: 203% -40%;
+      }
+   }
+}
+
+.for-headhunters {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+
+   &__title {
+      width: 22.71%;
+      position: absolute;
+      inset: 2390px 11.3%;
+      margin-bottom: 48px;
+      @include ManropeBold();
+      font-size: calc(20px + 20 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 60%;
+         position: absolute;
+         inset: 315% 11.3%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+         inset: 322% 11.3%;
+      }
+   }
+
+   @include mediumscreen {
+      &__title {
+         width: 100%;
+      }
+   }
+
+   &__text {
+      width: 40%;
+      height: 296px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      inset: 2494px 11.3%;
+   }
+
+   @include phone {
+      &__text {
+         width: 80%;
+         position: absolute;
+         top: 345%;
+         left: 15%;
+      }
+   }
+
+   @include tablet {
+      &__text {
+         width: 80%;
+         position: absolute;
+         top: 345%;
+         left: 15%;
+      }
+   }
+
+   &__subtitle {
+      width: 90%;
+      height: 26px;
+      margin-bottom: 8px;
+      @include ManropeBold();
+      font-size: calc(8px + 10 * (100vw / 1440));
+      color: $black;
+   }
+
+   &__content {
+      width: 90%;
+      height: 48px;
+      margin-bottom: 30px;
+      @include ManropeNormal();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      color: $grey;
+   }
+
+   &__button:hover {
+      border-color: $red;
+      background-color: $grey;
+   }
+
+   &__button {
+
+      width: 28.52%;
+      height: 52px;
+      position: absolute;
+      inset: 292px 376px 0px 0px;
+      background: $blue;
+      border-radius: 8px;
+      @include ManropeBold();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      text-align: center;
+      color: $white;
+   }
+
+   @include phone {
+      &__button {
+         width: 35%;
+         height: 10%;
+         position: absolute;
+         inset: 82% 0;
+      }
+   }
+
+   @include tablet {
+      &__button {
+         width: 25%;
+         height: 10%;
+         position: absolute;
+         inset: 82% 0;
+      }
+   }
+
+   &__picture {
+      width: 45%;
+      height: 530px;
+      position: absolute;
+      inset: 2291px 50%;
+
+   }
+
+   @include phone {
+      &__picture {
+         width: 100%;
+         height: 30%;
+         position: absolute;
+         inset: 317% 0;
+      }
+   }
+
+   @include tablet {
+      &__picture {
+         width: 140%;
+         height: 45%;
+         position: absolute;
+         inset: 303% 0;
+      }
+   }
+}
+
+.client {
+
+   &__content {
+      max-width: 1920px;
+      margin: 0px auto;
+      padding: 0px 11.3%;
+      height: 846px;
+      position: absolute;
+      inset: 2941px 0%;
+      background: #ECF8FE;
+   }
+
+   &__title {
+      width: 23.68%;
+      height: 56px;
+      margin-top: 112px;
+      position: absolute;
+      @include ManropeBold();
+      font-size: calc(20px + 20 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 100%;
+         position: absolute;
+         inset: -10% 10%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+         position: absolute;
+         inset: -11% 10%;
+      }
+   }
+
+   @include mediumscreen() {
+      &__title {
+         width: 100%;
+      }
+   }
+
+   &__subtitle {
+      width: 29.65%;
+      height: 30px;
+      margin-top: 176px;
+      position: absolute;
+      @include ManropeNormal();
+      font-size: calc(8px + 10 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &__subtitle {
+         width: 80%;
+         position: absolute;
+         inset: -10% 10%;
+      }
+   }
+
+   @include tablet {
+      &__subtitle {
+         width: 100%;
+         position: absolute;
+         inset: -13% 10%;
+      }
+   }
+
+   @include mediumscreen() {
+      &__subtitle {
+         width: 100%;
+      }
+   }
+
+   &__details {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      margin-top: 262px;
+   }
+
+   @include phone {
+      &__details {
+         display: flex;
+         flex-direction: column;
+         margin-top: 45%;
+      }
+   }
+
+   @include tablet {
+      &__details {
+         display: flex;
+         flex-direction: column;
+         margin-top: 25%;
+      }
+   }
+
+   &__item {
+      width: 33.3%;
+      height: 410px;
+      margin-right: 2.63%;
+      position: relative;
+      border-radius: 16px;
+      background: $white;
+      border-radius: 8px;
+   }
+
+   @include phone {
+      &__item {
+         width: 100%;
+         height: 210px;
+         margin-bottom: 15px;
+      }
+   }
+
+   @include tablet {
+      &__item {
+         width: 100%;
+         height: 210px;
+         margin-bottom: 15px;
+      }
+   }
+
+   &__icon-star {
+      width: 18.57%;
+      height: 42.02px;
+      position: absolute;
+      inset: 32px 11.43%;
+   }
+
+   @include phone {
+      &__icon-star {
+         width: 13%;
+         position: absolute;
+         inset: 3% 10%;
+      }
+   }
+
+   @include tablet {
+      &__icon-star {
+         width: 9%;
+         position: absolute;
+         inset: 7% 10%;
+      }
+   }
+
+   &__item-title {
+      position: absolute;
+      inset: 100px 11.4%;
+      @include ManropeBold();
+      font-size: (12px + 8 * (100 / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__item-title {
+         width: 75%;
+         position: absolute;
+         inset: 20% 10%;
+      }
+   }
+
+   @include tablet {
+      &__item-title {
+         width: 75%;
+         position: absolute;
+         inset: 30% 10%;
+      }
+   }
+
+   &__item-text {
+      width: 77.14%;
+      height: 96px;
+      position: absolute;
+      inset: 144px 11.4%;
+      @include ManropeNormal();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      line-height: 24px;
+      font-feature-settings: 'liga'off;
+      color: $black;
+   }
+
+   @include phone {
+      &__item-text {
+         width: 75%;
+         position: absolute;
+         inset: 30% 10%;
+      }
+   }
+
+   @include tablet {
+      &__item-text {
+         width: 75%;
+         position: absolute;
+         inset: 40% 10%;
+      }
+   }
+
+   &__picture {
+      width: 11.4%;
+      height: 40px;
+      position: absolute;
+      inset: 335px 11.4%;
+   }
+
+   @include phone {
+      &__picture {
+         position: absolute;
+         inset: 70% 11.4%;
+      }
+   }
+
+   @include tablet {
+      &__picture {
+         position: absolute;
+         inset: 75% 9%;
+      }
+   }
+
+   &__name {
+      position: absolute;
+      inset: 332px 26.29%;
+      @include ManropeNormal();
+      font-size: calc(8px + 8 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__name {
+         position: absolute;
+         inset: 70% 26.29%;
+      }
+   }
+
+   @include tablet {
+      &__name {
+         position: absolute;
+         inset: 75% 22%;
+      }
+   }
+
+   &__position {
+      position: absolute;
+      inset: 354px 26.29%;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: normal;
+      font-size: calc(8px + 6 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &__position {
+         position: absolute;
+         inset: 80% 26.29%;
+      }
+   }
+
+   @include tablet {
+      &__position {
+         position: absolute;
+         inset: 85% 22%;
+      }
+   }
+}
+
+.numbers {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+
+   &__title {
+      position: absolute;
+      width: 38.89%;
+      height: 56px;
+      inset: 3907px 11.3%;
+      @include ManropeBold();
+      font-size: calc(15px + 25 * (100vw / 1440));
+      line-height: 56px;
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 100%;
+         inset: 3840px 11.3%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+         inset: 3840px 11.3%;
+      }
+   }
+
+   @include mediumscreen {
+      &__title {
+         width: 100%;
+      }
+   }
+
+   &__subtitle {
+      position: absolute;
+      width: 34.72%;
+      height: 32px;
+      inset: 3971px 11.3%;
+      @include ManropeNormal();
+      font-size: calc(8px + 10 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &__subtitle {
+         width: 100%;
+         inset: 3900px 11.3%;
+      }
+   }
+
+   @include tablet {
+      &__subtitle {
+         width: 100%;
+         inset: 3900px 11.3%;
+      }
+   }
+
+   @include mediumscreen {
+      &__subtitle {
+         width: 100%;
+      }
+   }
+
+   &__details {
+      width: 79.17%;
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 4059px;
+   }
+
+   @include phone {
+      &__details {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 3%;
+         top: 3970px;
+      }
+   }
+
+   @include tablet {
+      &__details {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-gap: 3%;
+         top: 3970px;
+      }
+   }
+
+   &__item {
+      width: 25%;
+      height: 266px;
+      margin-right: 2.63%;
+      position: relative;
+      background: #F5F7FA;
+      border-radius: 16px;
+   }
+
+   @include phone {
+      &__item {
+         width: 100%;
+         height: 150px;
+      }
+   }
+
+   @include tablet {
+      &__item {
+         width: 100%;
+         height: 200px;
+      }
+   }
+
+   &__item-picture {
+      position: absolute;
+      width: 38.35%;
+      height: 90.13px;
+      inset: 43.87px 29%;
+   }
+
+   @include phone {
+      &__item-picture {
+         position: absolute;
+         inset: 10px 29%;
+      }
+   }
+
+   @include tablet {
+      &__item-picture {
+         position: absolute;
+         inset: 30px 29%;
+      }
+   }
+
+   &__item-amount {
+      width: 100%;
+      height: 56px;
+      position: absolute;
+      top: 148px;
+      text-align: center;
+      @include ManropeBold();
+      font-size: calc(20px + 20 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__item-amount {
+         position: absolute;
+         inset: 55% 0;
+      }
+   }
+
+   @include tablet {
+      &__item-amount {
+         position: absolute;
+         inset: 55% 0;
+      }
+   }
+
+   &__item-description {
+      width: 100%;
+      height: 32px;
+      position: absolute;
+      top: 202px;
+      text-align: center;
+      @include ManropeNormal();
+      font-size: calc(10px + 8 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &__item-description {
+         position: absolute;
+         inset: 78% 0;
+      }
+   }
+
+   @include tablet {
+      &__item-description {
+         position: absolute;
+         inset: 78% 0;
+      }
+   }
+}
+
+.news {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+
+   &_title-general {
+      position: absolute;
+      width: 7.43%;
+      height: 56px;
+      inset: 4432px 11.3%;
+      @include ManropeBold();
+      font-size: calc(20px + 20 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include tablet {
+      &_title-general {
+         inset: 4460px 11.3%;
+      }
+   }
+
+   &__details {
+      width: 77.08%;
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 4544px;
+   }
+
+   @include phone {
+      &__details {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   @include tablet {
+      &__details {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-row-gap: 120px;
+      }
+   }
+
+   &_item {
+      width: 33.3%;
+      margin-right: 2%;
+      position: relative;
+      border-radius: 16px;
+   }
+
+   @include phone {
+      &_item {
+         width: 45%;
+         margin-right: 5%;
+         margin-bottom: 12%;
+      }
+   }
+
+   @include tablet {
+      &_item {
+         width: 45%;
+         margin-right: 5%;
+         margin-bottom: 2%;
+      }
+   }
+
+   &_icon {
+      width: 100%;
+      border-radius: 8px;
+   }
+
+   &__title {
+      width: 100%;
+      position: absolute;
+      top: 226px;
+      @include ManropeBold();
+      font-size: calc(10px + 10 * (100vw / 1440));
+      color: $black;
+   }
+
+   @include phone {
+      &__title {
+         width: 100%;
+         position: absolute;
+         inset: 0% 110%;
+      }
+   }
+
+   @include tablet {
+      &__title {
+         width: 100%;
+         position: absolute;
+         inset: 0% 110%;
+         font-size: 10px;
+      }
+   }
+
+   @include mediumscreen {
+      &__title {
+         font-size: 17px;
+      }
+   }
+
+   &_content {
+      position: absolute;
+      top: 266px;
+      @include ManropeNormal();
+      font-size: calc(7px + 9 * (100vw / 1440));
+      color: $grey;
+   }
+
+   @include phone {
+      &_content {
+         width: 130%;
+         position: absolute;
+         inset: 52% 110%;
+      }
+   }
+
+   @include tablet {
+      &_content {
+         width: 130%;
+         position: absolute;
+         inset: 40% 110%;
+         font-size: 10px;
+      }
+   }
+
+   @include mediumscreen {
+      &_content {
+         font-size: 14px;
+      }
+   }
+}
+
+.cookies {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+   height: 134px;
+   position: absolute;
+   inset: 4908px 0%;
+   background: $grey;
+
+
+   &__text-bold {
+      position: absolute;
+      width: 36.39%;
+      inset: 20px 25.42%;
+      @include ManropeBold();
+      font-size: calc(7px + 7 * (100vw / 1440));
+      line-height: 16px;
+      color: $black;
+   }
+
+   @include phone {
+      &__text-bold {
+         width: 80%;
+         position: absolute;
+         inset: 6px 11.5%;
+      }
+   }
+
+   @include tablet {
+      &__text-bold {
+         width: 40%;
+         height: 18%;
+         position: absolute;
+         inset: 5% 14.9%;
+      }
+   }
+
+   @include mediumscreen {
+      &__text-bold {
+         width: 50%;
+         position: absolute;
+         inset: 8% 22.9%;
+      }
+   }
+
+   &__text-normal {
+      position: absolute;
+      width: 36.39%;
+      height: 86px;
+      inset: 37px 25.42%;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: calc(6px + 8 * (100vw / 1440));
+      text-align: justify;
+      line-height: 16px;
+      color: $black;
+   }
+
+   @include phone {
+      &__text-normal {
+         width: 80%;
+         position: absolute;
+         inset: 20px 12%;
+      }
+   }
+
+   @include tablet {
+      &__text-normal {
+         width: 55%;
+         height: 18%;
+         position: absolute;
+         inset: 15% 15%;
+      }
+   }
+
+   @include mediumscreen {
+      &__text-normal {
+         width: 40%;
+         position: absolute;
+         inset: 21% 23%;
+      }
+   }
+
+   &__button:hover {
+      border-color: $red;
+      background-color: darken($grey, 35%);
+   }
+
+   &__button {
+      width: 7.78%;
+      height: 40px;
+      position: absolute;
+      inset: 49px 64.93%;
+      background: $black;
+      border-radius: 100px;
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: bold;
+      font-size: calc(7px + 7 * (100vw / 1440));
+      line-height: 20px;
+      text-align: center;
+      font-feature-settings: 'liga'off;
+      color: $white;
+   }
+
+   @include phone {
+      &__button {
+         width: 20%;
+         height: 18%;
+         position: absolute;
+         inset: 102px 40%;
+      }
+   }
+
+   @include tablet {
+      &__button {
+         width: 12%;
+         height: 20%;
+         position: absolute;
+         inset: 40% 73%;
+      }
+   }
+
+   @include mediumscreen {
+      &__button {
+         width: 10%;
+         height: 25%;
+      }
+   }
+}
+
+.other-info {
+
+   max-width: 1920px;
+   margin: 0px auto;
+   padding: 0px 11.3%;
+   height: 360px;
+   position: absolute;
+   inset: 5042px 0%;
+   background: #0B0D17;
+
+   &__i-tapp {
+      position: absolute;
+      left: 11.3%;
+      top: 64px;
+   }
+
+   &__i-tapp-header {
+      position: static;
+      width: 7.57px;
+      height: 37px;
+      inset: 0;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: $white;
+      margin: 40px 0px;
+   }
+
+   &__i-tapp-text {
+      position: static;
+      inset: 0;
+      @include ManropeNormal();
+      font-size: calc(8px + 6 * (100vw / 1440));
+      color: #D9DBE1;
+      margin: 8px 0px;
+   }
+
+   &__company {
+      position: absolute;
+      left: 44.44%;
+      top: 17.78%;
+   }
+
+   @include phone {
+      &__company {
+         position: absolute;
+         left: 50%;
+         top: 15%;
+      }
+   }
+
+   &__company-header {
+      position: static;
+      width: 15%;
+      height: 28px;
+      inset: 0;
+      @include ManropeBold();
+      font-size: calc(12px + 8 * (100vw / 1440));
+      color: $white;
+      margin: 24px 0px;
+   }
+
+   @include phone {
+      &__company-header {
+         position: absolute;
+         inset: -35% 0%;
+      }
+   }
+
+   &__company-text:hover {
+      border-radius: 8px;
+      background-color: $grey;
+   }
+
+   &__company-text {
+
+      position: static;
+      height: 26px;
+      inset: 0;
+      font-size: calc(10px + 6 * (100vw / 1440));
+      color: #D9DBE1;
+      margin: 12px 0px;
+   }
+
+   @include phone {
+      &__company-text {
+         height: 5%;
+      }
+   }
+
+
+   &__jobs {
+      position: absolute;
+      left: 59.38%;
+      top: 17.78%;
+   }
+
+   @include phone {
+      &__jobs {
+         position: absolute;
+         left: 50%;
+         top: 65%;
+      }
+   }
+
+   @include tablet {
+      &__jobs {
+         position: absolute;
+         left: 70%;
+      }
+   }
+
+   @include mediumscreen {
+      &__jobs {
+         position: absolute;
+         left: 65%;
+      }
+   }
+
+   &__jobs-header {
+      position: static;
+      width: 15%;
+      height: 28px;
+      inset: 0;
+      @include ManropeBold();
+      font-size: calc(12px + 8 * (100vw / 1440));
+      color: $white;
+      margin: 24px 0px;
+   }
+
+   @include phone {
+      &__jobs-header {
+         position: absolute;
+         inset: -40% 0%;
+      }
+   }
+
+   &__jobs-text:hover {
+      border-radius: 8px;
+      background-color: $grey;
+   }
+
+   &__jobs-text {
+
+      position: static;
+      height: 26px;
+      inset: 0;
+      @include ManropeNormal();
+      font-size: calc(10px + 6 * (100vw / 1440));
+      color: #D9DBE1;
+      margin: 12px 0px;
+   }
+
+   @include phone {
+      &__jobs-text {
+         height: 5%;
+      }
+   }
+}
